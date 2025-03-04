@@ -400,16 +400,8 @@ left: 0;
 bottom: -15px;
 width: 100%;
 }
-.icons.calendar.plus.arrow{
-position: absolute;
-  right: 0;
-  z-index: 2;
- font-size: 30px;
-  border: 2px solid white;
-  padding: 5px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(104, 104, 186);
-}
+
+
 
 @media screen and (min-width: 500px) {
   
@@ -425,18 +417,80 @@ section h2 {
   position: absolute;
   top: -20px;
 }
-.icons.calendar.plus.arrow{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  
-}
-}
-@media screen and (min-width: 700px) {}
 
+
+}
+
+
+.icons,
+.arrow {
+  line-height: 1;
+  position: fixed;
+  right: -18px;
+  z-index: 999;
+}
+
+.icons {
+  top: 16px;
+}
+
+.arrow {
+  bottom: 16px;
+}
+
+
+.arrow a,
+.icons a {
+  color: #f7575e;
+  font-size: 2rem;
+  display: block;
+}
+
+.icons a {
+  color: rgb(45, 101, 185);
+}
+
+.icons a:first-child {
+  margin-bottom: 1rem;
+}
+
+.arrow .far,
+.icons .far {
+  background: #ffffffa1;
+  backdrop-filter: blur(2px);
+  line-height: 0.8;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+  padding: 16px;
+  border: 3px solid white;
+}
+
+
+aside div {
+  background-color: #e3e3e3;
+  border: 1px solid #c3c3c3;
+  margin-bottom: 1em;
+  padding: 1em;
+  position: relative;
+}
+
+aside div .fa-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 4rem;
+  opacity: 0.1;
+}
 
 @media screen and (min-width: 1200px) {
- .icons.calendar {
-
- }
+  aside div {
+    display: inline-block;
+    width: 33.333%;
+    margin-inline: -2px;
+  }
+}
+aside div p:last-child {
+  margin-bottom: 0;
+  font-size: 0.8em;
+  text-align: right;
 }
